@@ -66,7 +66,7 @@ def storage_info():
                     storage_info.append(f"{name}: {size} ({storage_type})")
 
         return {
-            "Stockage (non système)": "\n".join(storage_info) if storage_info else "Aucun périphérique de stockage non système détecté"
+            "Stockage (non hardetect)": "\n".join(storage_info) if storage_info else "Aucun périphérique de stockage non système détecté"
         }
     except subprocess.CalledProcessError:
         return {
